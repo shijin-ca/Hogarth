@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "News Rss feed";
+}
+@*<div class="container">
+    <div class="row">
+        <form class="search_forms" method="get" action="~/Search/Index">
+            <input type="text" name="Q" placeholder="Enter RSS Feed News Url.." style="height: 40px;width:600px;">
+            <button class="btn btn-primary btn-small" type="submit">Feed News</button>
+        </form>
+    </div>
+</div>*@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="span10 offset1 ">
+                <h2>
+                    @*Search @if (!string.IsNullOrEmpty(Model.Q))
+                    {<text> for: '@Model.Q'</text>}*@
+                </h2>
+                @*<p>Below you can find more information about our company</p>*@
+            </div>
+        </div>
+    </div>
+</section>
+@*</div>*@
+<br />
+
+<div class="container">
+    <div class="row">
+        <div class="span10 ">
+            <p>Title</p>
+        </div>
+        <div class="span2 align-content-end">
+            <p>Published On: </p>
+        </div>
+       
+    </div>
+</div>
+
+@*@if (Model.Hits != null && Model.Hits.Count() > 0)
+{
+    <div class="about-us container">
+        <div class="row">
+            <div class="span10 offset1 ">
+                @foreach (var hit in Model.Hits)
+                {
+                    <h3>@hit.Title</h3>
+                    <p>@Html.Raw(hit.Excerpt)</p>
+                    <a href="@hit.Url">Read more</a>
+                }
+            </div>
+        </div>
+    </div>
+}*@
