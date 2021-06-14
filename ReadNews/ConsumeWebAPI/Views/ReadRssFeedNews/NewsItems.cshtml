@@ -1,0 +1,52 @@
+﻿@{
+    var AllSortBy = new List<SelectListItem>() {
+        new SelectListItem{ Text = "Date", Value = "1", Selected=true },
+        new SelectListItem{ Text = "Heading", Value = "0" }
+        };
+
+    var AllSortAscDescBy = new List<SelectListItem>() {
+        new SelectListItem{ Text = "Desc", Value = true.ToString(), Selected=true },
+        new SelectListItem{ Text = "Asc", Value = false.ToString() }
+    };
+    Layout = "";
+
+}
+@model ReadRssFeedNewsListViewModel
+@if (Model != null && Model.RssFeedList.Count() > 0)
+{<section>
+        <div class="container">
+            <div class="row float-right">
+                <form class="search_forms" method="get" action="~/ReadRssFeedNews/Index">
+                    <div class="span10" style="text-align: right; width: 100%;">
+                        <span style="margin:15px;">Sort: </span> @Html.DropDownListFor(x => x.SortBy, AllSortBy, new { onchange = "this.form.submit();", placeholder = "Search ...", @class = "input-medium search-query select-auto-post pull-right" })
+                        @Html.DropDownListFor(x => x.Desc, AllSortAscDescBy, new { onchange = "this.form.submit();", placeholder = "Search ...", @class = "input-medium search-query select-auto-post pull-right" })
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br />
+    @*</div>*@
+
+
+
+    <div class="about-us container">
+        <div class="row">
+            <div class="span10 offset1 ">
+                @foreach (var rssNews in Model.RssFeedList)
+                {
+                    <h4><a href="~/ReadRssFeedNews/ReadNewsDetails/@rssNews.Id">@rssNews.Title</a></h4>
+                    <p>Published On: @rssNews.PublishingDate</p>
+                }
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container">
+        <div class="row">
+            <p>Not a valid RSS feed News Url or No data found</p>
+        </div>
+    </div>
+}

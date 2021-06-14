@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadNewsWebAPI", "ReadNews\ReadNewsWebAPI.csproj", "{DCA8876E-B5EB-470F-A1A0-B57BBD4BEBF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumeWebAPI", "ConsumeWebAPI\ConsumeWebAPI.csproj", "{44CD6311-91FE-44B0-9625-CBE3A99D04C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCA8876E-B5EB-470F-A1A0-B57BBD4BEBF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA8876E-B5EB-470F-A1A0-B57BBD4BEBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA8876E-B5EB-470F-A1A0-B57BBD4BEBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA8876E-B5EB-470F-A1A0-B57BBD4BEBF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44CD6311-91FE-44B0-9625-CBE3A99D04C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44CD6311-91FE-44B0-9625-CBE3A99D04C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44CD6311-91FE-44B0-9625-CBE3A99D04C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44CD6311-91FE-44B0-9625-CBE3A99D04C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {433672A5-9D36-428D-AF8D-F87B1A660CF7}
+	EndGlobalSection
+EndGlobal
